@@ -5,6 +5,7 @@ import sbt._
 object Dependencies {
 
     lazy val ZioVersion = "1.0.4"
+    lazy val PureconfigVersion = "0.12.3"
 
     lazy val zio: Seq[ModuleID] = Seq(
       "dev.zio" %% "zio" % ZioVersion,
@@ -13,5 +14,10 @@ object Dependencies {
       "dev.zio" %% "zio-macros" % ZioVersion,
       "dev.zio" %% "zio-config" % ZioVersion,
       "dev.zio" %% "zio-config-magnolia" % ZioVersion
+    )
+
+    lazy val pureconfig: Seq[ModuleID] = Seq(
+      "com.github.pureconfig" %% "pureconfig" % PureconfigVersion,
+      "com.github.pureconfig" %% "pureconfig-cats-effect" % PureconfigVersion
     )
 }

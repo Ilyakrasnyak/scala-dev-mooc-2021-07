@@ -12,6 +12,7 @@ import zio.IO
 import zio.duration._
 import scala.language.postfixOps
 import module3.zioConcurrency
+import module3.zioDS
 
 
 
@@ -22,7 +23,7 @@ object App {
 
   
 
-    zio.Runtime.default.unsafeRun(zioConcurrency.printEffectRunningTime(zioConcurrency.greeter2))
+    zio.Runtime.default.unsafeRun(zioDS.ref.updateCounterRef.flatMap(c => putStrLn(c.toString())))
   }
 }
 

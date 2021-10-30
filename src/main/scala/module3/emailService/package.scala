@@ -1,7 +1,7 @@
 package module3
 
 import zio.Has
-import zio.URIO
+import zio.{URIO, UIO}
 import zio.{ZLayer, ULayer}
 import zio.console
 import zio.ZIO
