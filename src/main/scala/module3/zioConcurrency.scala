@@ -8,7 +8,6 @@ import zio.internal.Executor
 
 import java.util.concurrent.TimeUnit
 import scala.language.postfixOps
-import zio.Task
 
 object zioConcurrency {
 

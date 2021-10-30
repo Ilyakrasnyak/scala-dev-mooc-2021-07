@@ -9,19 +9,19 @@ import zio.macros.accessible
 
 package object emailService {
 
-    type EmailService = Has[EmailService.Service]
+  type EmailService = Has[EmailService.Service]
 
-    @accessible
-    object EmailService{
+  @accessible
+  object EmailService {
 
-        trait Service{
-            def sendMail(email: Email): URIO[zio.console.Console, Unit]
-        }
-
-        val live = ZLayer.succeed(new Service {
-            def sendMail(email: Email): URIO[zio.console.Console,Unit] = 
-                console.putStrLn(email.toString())
-        })
+    trait Service {
+      def sendMail(email: Email): URIO[zio.console.Console, Unit]
     }
+
+    val live = ZLayer.succeed(new Service {
+      def sendMail(email: Email): URIO[zio.console.Console, Unit] =
+        console.putStrLn(email.toString)
+    })
+  }
 
 }

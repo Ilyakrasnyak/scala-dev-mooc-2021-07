@@ -10,6 +10,8 @@ object Dependencies {
       "dev.zio" %% "zio" % ZioVersion,
       "dev.zio" %% "zio-test" % ZioVersion,
       "dev.zio" %% "zio-test-sbt" % ZioVersion,
-      "dev.zio" %% "zio-macros" % ZioVersion
+      "dev.zio" %% "zio-macros" % ZioVersion,
+      "dev.zio" %% "zio-config" % ZioVersion,
+      "dev.zio" %% "zio-config-magnolia" % ZioVersion
     )
 }
